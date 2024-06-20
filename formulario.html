@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2>FORMULARIO DE CORRECIÓN DE CALIFICACIÓN</h2>
+                <hr>
+                <form id="form">
+                    <div class="mb-3">
+                        <label for="curso" class="form-label">Indica a que programa pertence</label>
+                        <select class="form-select" id="curso">
+                            <option value="">Seleccione su programa academico</option>
+                            <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                            <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                            <option value="Ingeniería Multimedia">Ingeniería Multimedia</option>
+                            <option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+                            <option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option>
+                            <option value="Ingeniería Biomédica">Ingeniería Biomédica</option>
+                            <option value="Ingeniería Civil">Ingeniería Civil</option>
+                            <option value="Diseño Industrial">Diseño Industrial</option>
+                        </select>
+                    </div>
+                    <div class="row mb-3">
+
+                         
+
+                        <div class="col-md-6">
+                            <label for="nombre" class="form-label">Ingrese el  nombre completo del estudiante</label>
+                            <input type="text" class="form-control" id="nombree">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="nombre" class="form-label">Ingrese el  nombre completo del profesor</label>
+                            <input type="text" class="form-control" id="nombrep">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="codigo" class="form-label">Ingrese el código del estudiante</label>
+                            <input type="text" class="form-control" id="codigoe">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label">Ingresa el nombre del curso y su código</label>
+                                <input type="text" class="form-control" id="cursoc">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label">Ingresa el periodo académico</label>
+                                <input type="text" class="form-control" id="pa">
+                            </div>
+                        </div>
+                        <div class="row mb-6">
+                            <h1>Ingresa X en el campo del parcial en el cual desea cambiar la calificación</h1>
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label"> Primer parcial </label>
+                                <input type="text" class="form-control" id="c1">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label"> Segundo parcial </label>
+                                <input type="text" class="form-control" id="c2">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label"> Tercer parcial </label>
+                                <input type="text" class="form-control" id="c3">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label"> Parcial único </label>
+                                <input type="text" class="form-control" id="c4">
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+
+                            <h1>Coloque la calificación corregida en formato numérico y en  formato letra </h1>
+                            
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label">Calificación corregida en formato numerico </label>
+                                <input type="text" class="form-control" id="cc1">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label">Calificación corregida en formato letra </label>
+                                <input type="text" class="form-control" id="cl">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label">Calificación corregida en formato numerico </label>
+                                <input type="text" class="form-control" id="cc2">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cursoc" class="form-label">Calificación corregida en formato letra </label>
+                                <input type="text" class="form-control" id="cl2">
+                            </div>
+                        </div>
+
+                        
+
+                            <span class="d-block pb-2">Firma digital del profesor</span>
+                            <div class="signature mb-2" style="width: 100%; height: 200px;">
+                                <canvas id="signature-canvas"
+                                    style="border: 1px dashed red; width: 100%; height: 200px;"></canvas>
+                            </div>
+                            <div class="mb-3">
+                                <label for="signature-file" class="form-label">O adjunte una imagen de su firma</label>
+                                <input type="file" class="form-control" id="signature-file">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary mb-4">Generar PDF</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
